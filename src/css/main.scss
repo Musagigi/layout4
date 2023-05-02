@@ -1,9 +1,9 @@
-// @import 'vars.less';
+@import "./normalize/normalize";
 
-// @import (sass) 'normalize.css';
-// @import 'base.less';
+// @import './vars/vars.scss';
+@import "./base/base.scss";
 
-@import './styles/about.scss';
+// @import "./styles/about.scss";
 // @import './sections/team.less';
 // @import './sections/footer.less';
 // @import './sections/preview.less';

@@ -62,14 +62,14 @@ ol {
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-	font-family: 'PT Serif', serif;
+	font-family: "Poppins", sans-serif;
+	font-family: "PT Serif", serif;
 	font-weight: 400;
 	font-size: 16px;
-	color: @colorBlack;
+	// color: $colorBlack;
 	max-width: 1440px;
 	margin: 0 auto;
-	background: #FAFAFA;
+	background: #fafafa;
 }
 
 .body {
@@ -81,17 +81,17 @@ body {
 .container {
 	margin: 0 auto;
 	max-width: 960px;
-	padding: 0 @offsetOneSide;
+	// padding: 0 $offsetOneSide;
 }
 
 @media screen and (max-width: 767px) {
 	.container {
-		padding: 10px @offsetOneSide;
+		// padding: 10px $offsetOneSide;
 	}
 }
 
 @media screen and (max-width: 321px) {
 	.container {
-		padding: 10px (@offsetOneSide / 2);
+		// padding: 10px ($offsetOneSide / 2);
 	}
 }

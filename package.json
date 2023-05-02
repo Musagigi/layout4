@@ -30,7 +30,6 @@
 	},
 	"browserslist": "> 0.5%",
 	"dependencies": {
-		"gh-pages": "^5.0.0",
-		"normalize.css": "^8.0.1"
+		"gh-pages": "^5.0.0"
 	}
 }
