@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const del = require('del')
 const browserSync = require('browser-sync').create() //обнов. страницу, при измен.
-const less = require('gulp-less');
+const sass = require('gulp-sass')(require('sass'));
 const gulpIf = require('gulp-if')
 const cleanCSS = require('gulp-clean-css') // убирает лишние пробелы, табы и т.д.
 const autoprefixer = require('gulp-autoprefixer')
@@ -26,9 +26,9 @@ function html() {
 }
 
 function styles() {
-	return gulp.src('./src/css/main.less')
+	return gulp.src('./src/css/main.scss')
 		.pipe(gulpIf(isMapForDevelop, sourcemaps.init()))
-		.pipe(less())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(gulpIf(isMinify, gcmq()))
 		.pipe(gulpIf(isMinify, autoprefixer({})))
 		.pipe(gulpIf(isMinify, cleanCSS({ level: 1 })))
@@ -59,7 +59,7 @@ function watch() {
 			baseDir: './build/'
 		}
 	})
-	gulp.watch('./src/css/**/*.less', styles)
+	gulp.watch('./src/css/**/*.scss', styles)
 	gulp.watch('./src/**/*.html', html)
 	gulp.watch('./src/js/**/*.js', scripts)
 }

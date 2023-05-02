@@ -1,11 +1,11 @@
-@import 'vars.less';
+// @import 'vars.less';
 
-@import (less) 'normalize.css';
-@import 'base.less';
+// @import (sass) 'normalize.css';
+// @import 'base.less';
 
-@import './sections/aboutUs.less';
-@import './sections/team.less';
-@import './sections/footer.less';
+@import './styles/about.scss';
+// @import './sections/team.less';
+// @import './sections/footer.less';
 // @import './sections/preview.less';
 // @import './sections/portfolio.less';
 // @import './sections/quoute.less';
