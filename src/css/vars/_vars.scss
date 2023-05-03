@@ -1,6 +1,6 @@
 $columns: 12;
 $offset: 30px;
-$offsetOneSide: ($offset / 2);
+$offsetOneSide: 15px;
 $pathImg: "../img/";
 $colorWhite: #fff;
 $colorBlack: #000;
@@ -11,7 +11,7 @@ $colorBlack: #000;
 
 // .col ($val, $clmn: $columns, $ofse: $offset) {
 // 	$width: (100% / $clmn * $val);
-// 	width: calc(@width - @ofse);
+// 	width: calc($width - $ofse);
 // 	word-wrap: break-word;
 // }
 
