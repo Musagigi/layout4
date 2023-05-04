@@ -62,29 +62,38 @@ ol {
 }
 
 body {
-	font-family: "Poppins", sans-serif;
-	font-family: "PT Serif", serif;
+	max-width: $maxWidthBody;
+	margin: 0 auto;
+	overflow-x: hidden;
+	font-family: $mainFont;
+	font-family: $secondFont;
 	font-weight: 400;
 	font-size: 16px;
 	color: $colorBlack;
-	max-width: 1440px;
-	margin: 0 auto;
-	background: #fafafa;
-}
-
-.body {
-	max-width: 1920px;
-	margin: 0 auto;
-	overflow-x: hidden;
 }
 
 .container {
+	max-width: $maxWidthContainer;
 	margin: 0 auto;
-	max-width: 1152px;
-	padding: 0 $offsetOneSide;
+	padding: 0 15px;
+}
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: 32px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 @media screen and (max-width: 767px) {
+	html {
+		font-size: 8px;
+	}
+
 	.container {
 		padding: 10px $offsetOneSide;
 	}
